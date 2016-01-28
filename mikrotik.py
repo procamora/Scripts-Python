@@ -4,7 +4,7 @@ import time, os, sys
 
 def main():
 	fecha = time.strftime("%Y%m%d-%S")
-	routers = ['mk1', 'mk2', 'mk3', 'mk4', 'mk7','mk8',]
+	routers = ['mks1', 'mks2',]
 
 	if sys.platform == 'win32':
 		ruta= ''
