@@ -1,43 +1,56 @@
-#!/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 import platform
-#borrar luego
+
 
 class Sistema():
-	def Tipo(self, Imprime="Opcional"):
-		'''Sistema operativo del sistema'''
-		tipoSistema = platform.uname()[0]
-		return tipoSistema
+    def Tipo(self, imprime=False):
+        '''Sistema operativo del sistema'''
+        tipoSistema = platform.uname()[0]
+        if imprime:
+            print(tipoSistema)
+        return tipoSistema
 
-	def Arq(self, Imprime="Opcional"):
-		'''Arquitectura del sistema'''
-		tipoArq = platform.architecture()[0]
-		return tipoArq
+    def Arq(self, imprime=False):
+        '''Arquitectura del sistema'''
+        tipoArq = platform.architecture()[0]
+        if imprime:
+            print(tipoArq)
+        return tipoArq
 
-	def Version(self, Imprime="Opcional"):
-		'''Version del sistema operativo'''
-		tipoVersion = platform.release()
-		return tipoVersion
+    def Version(self, imprime=False):
+        '''Version del sistema operativo'''
+        tipoVersion = platform.release()
+        if imprime:
+            print(tipoVersion)
+        return tipoVersion
 
-	def VersionPy(self, Imprime="Opcional"):
-		'''Version del interprete de python'''
-		tipoVersionPy = platform.python_version()
-		return tipoVersionPy
+    def VersionPy(self, imprime=False):
+        '''Version del interprete de python'''
+        tipoVersionPy = platform.python_version()
+        if imprime:
+            print(tipoVersionPy)
+        return tipoVersionPy
 
-	def BasadoEn(self, Imprime="Opcional"):
-		tipoBasadoEn =  platform.system()
-		return tipoBasadoEn
+    def BasadoEn(self, imprime=False):
+        tipoBasadoEn =  platform.system()
+        if imprime:
+            print(tipoBasadoEn)
+        return tipoBasadoEn
 
 
-prueba = Sistema()
+
+if __name__ == '__main__':
+    prueba = Sistema()
 
 
-if prueba.Tipo() == "Windows":
-	print "win"
-	#os.system("ipconfig")  
-elif prueba.Tipo() == "Linux":
-	print "Lin"
-	#os.system("ifconfig")
-	
-#print prueba.Tipo.__doc__
-#help(prueba.Tipo)
+    if prueba.Tipo() == "Windows":
+        print("windows")
+        #os.system("ipconfig")  
+    elif prueba.Tipo() == "Linux":
+        print("Linux")
+        #os.system("ifconfig")
+        
+    #print prueba.Tipo.__doc__
+    #help(prueba)
