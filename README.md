@@ -1,6 +1,7 @@
 ﻿Recopilacion de pequeños scripts desarrollados en Python  3
 
 ------
+
 ##Ficheros:
 
 * **agenda.py**: Genera un fichero xml con todos los contactos sacados de la base de datos, para importar a un telefono yealink.
