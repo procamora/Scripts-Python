@@ -7,7 +7,7 @@ import psutil       #http://pythonhosted.org/psutil/
 
 
 def CrearArgParseo():
-    parser = argparse.ArgumentParser(prog='kill_process.exe', description='Script para matar todos los procesos que tengan un determinado nombre.')
+    parser = argparse.ArgumentParser(description='%(prog)s Script para matar todos los procesos que tengan un determinado nombre.')
     parser.add_argument('-p', '--proceso', help='Nombre del proceso a matar, por ejemplo: "explorer.exe".')
     parser.add_argument('-f', '--file', help='Nombre que tendra el fichero de log.')
     parser.add_argument('-v', '--verbose', action='store_true', help='Verbose flag.', default=False)
